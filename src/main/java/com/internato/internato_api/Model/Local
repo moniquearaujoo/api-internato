@@ -1,0 +1,12 @@
+@Entity
+public class Local {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String nome;
+
+    @ElementCollection
+    private List<String> especialidades = new ArrayList<>();
+}
