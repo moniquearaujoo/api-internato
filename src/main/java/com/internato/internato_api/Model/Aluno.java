@@ -1,5 +1,9 @@
+package com.internato.internato_api.Model;
+
+import jakarta.persistence.*;
+
 @Entity
-public class Coordenador {
+public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -8,8 +12,5 @@ public class Coordenador {
     private String nome;
 
     @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false)
-    private String senha;
+    private String matricula;
 }

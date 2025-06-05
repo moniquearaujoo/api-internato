@@ -1,3 +1,10 @@
+package com.internato.internato_api.Model;
+
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Local {
     @Id
@@ -9,4 +16,7 @@ public class Local {
 
     @ElementCollection
     private List<String> especialidades = new ArrayList<>();
+
+    @OneToOne
+    private Preceptor preceptor;
 }
